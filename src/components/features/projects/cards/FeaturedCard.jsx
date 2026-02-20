@@ -1,4 +1,4 @@
-import { FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight, FaRocket } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useMouseTracking } from '../../../../hooks/useMouseTracking'
 import '../list/FeaturedProjects.css'
@@ -13,6 +13,14 @@ const FeaturedCard = ({ project, active }) => {
             className={`featured-card glass-surface glass-interactive glass-glow ${active ? 'active' : ''}`}
             onMouseMove={handleMouseMove}
         >
+            {/* ✅ PRODUCTION LABEL */}
+           
+                <div className="project-production-label">
+                   {/*  <FaRocket size={14} /> */}
+                    <span>EN PRODUCCIÓN</span>
+                </div>
+            
+
             <img
                 src={project.thumbnail || project.image}
                 alt={project.title}
@@ -25,6 +33,7 @@ const FeaturedCard = ({ project, active }) => {
                         <h3 className="card-title-lg text-h5">
                             {project.title}
                         </h3>
+
                         <div className="card-footer">
                             <span className="card-subtitle-tech text-label neon-text-primary">
                                 {project.tech?.join(' • ')}

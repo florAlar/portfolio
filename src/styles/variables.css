@@ -43,7 +43,7 @@
    --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 
    /* Typography */
-   --font-main: 'Inter', system-ui, sans-serif;
+   --font-main: "Oxanium", sans-serif; /* "Tomorrow", sans-serif; */
    --font-mono: 'Share Tech Mono', monospace;
    --font-special: 'Share Tech Mono', monospace;
 
@@ -52,6 +52,7 @@
    --space-sm: 0.5rem;
    --space-md: 1rem;
    --space-lg: 2rem;
+   --space-lg2:3rem;
    --space-xl: 4rem;
 
    /* Transitions */

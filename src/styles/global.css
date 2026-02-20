@@ -120,8 +120,9 @@ h6 {
     
 }
 .text-outline {
-  color: var(--text-muted) 0.9; /* relleno invisible */
-  /* -webkit-text-stroke: 1px var(--text-muted); */
+  /* color: transparent;
+  -webkit-text-stroke: 1px var(--text-muted); */
+  color: #d3d1d1;
  
   letter-spacing: 2px;
   
@@ -167,9 +168,9 @@ h6 {
 .text-muted {
   color: var(--text-muted);
 }
-.opacity{
+/* .opacity{
   opacity: 0.8;
-}
+} */
 
 /* =========================
    GLASS SYSTEM
@@ -237,10 +238,10 @@ h6 {
   padding: var(--page-padding-v) var(--space-md) 0;
 }
 
-.section-v-padding {
+/* .section-v-padding {
   padding: var(--section-spacing) 0;
   margin-top: var(--space-lg) ;
-}
+} */
 
 .section-margin {
   margin: 4rem 0;
@@ -317,7 +318,7 @@ h6 {
 
 /* Section Headers */
 .section-header {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-lg2);
   margin-bottom: var(--space-lg);
   display: flex;
   flex-direction: column;

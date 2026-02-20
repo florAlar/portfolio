@@ -12,8 +12,8 @@ const FeaturedProjects = ({ projects }) => {
             <div className="container-wide">
                 <div className="featured-wrapper">
                     <div className="section-header">
-                        <h2 className="text-h2 text-outline opacity">PROJECTS</h2>
-                        <p className="intro-text">web products & real-world applications</p>
+                        <h2 className="text-h2 text-outline opacity">PROYECTOS</h2>
+                        <p className="intro-text">Productos web & aplicaciones academicas</p>
                     </div>
 
                     <div className="featured-grid">

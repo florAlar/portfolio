@@ -246,6 +246,43 @@
 }
 
 /* =========================================
+   PRODUCTION LABEL
+========================================= */
+
+.project-production-label {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 4px 10px;
+    border-radius: 8px;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    color: var(--text-muted);
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+
+    
+    pointer-events: none;
+}
+
+/* icon alignment */
+.project-production-label svg {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
    MOBILE OVERRIDES
    
    CRITICAL: These rules must use `.featured-card` directly (not `> *` from parent)

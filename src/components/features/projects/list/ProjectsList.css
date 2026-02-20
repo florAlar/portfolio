@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     overflow: visible;
-    margin: var(--space-lg) 0;
+    margin: var(--space-md) 0;
 }
 
 /* Container width handled by .container-wide global class */

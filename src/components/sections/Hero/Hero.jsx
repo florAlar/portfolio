@@ -46,9 +46,9 @@ const Hero = () => {
       {/* BACKGROUND */}
       <div className="hero-glow-bg"></div>
 
-      <div className="hero-bg-text">
+   {/*    {<div className="hero-bg-text">
         <span>PORTFOLIO</span>
-      </div>
+      </div>} */}
 
       {/* FIGURE */}
       <div className="hero-figure-container">

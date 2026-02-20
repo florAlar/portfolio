@@ -12,10 +12,10 @@ const ProjectsList = ({ projects }) => {
 
       <div className="container-wide">
 
-        <div className="section-header">
+        {/* <div className="section-header">
           <h2 className="text-h3 text-outline opacity">ACADEMIC</h2>
           <p className="intro-text">Foundation & Lifelong learning</p>
-        </div>
+        </div> */}
         <div className="projects-grid">
           {projects.map((project) => {
             return (
