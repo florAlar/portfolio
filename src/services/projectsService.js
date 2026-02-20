@@ -1,4 +1,4 @@
-const PROJECTS_URL = '/data/projects.json'
+const PROJECTS_URL = `${import.meta.env.BASE_URL}data/projects.json`
 
 // Cache en memoria para hacer la solicitud de tipo get solo una vez y luego filtrar cuando se necesite.
 let projectsCache = null
