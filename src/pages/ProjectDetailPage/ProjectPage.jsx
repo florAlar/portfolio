@@ -30,7 +30,6 @@ function ProjectPage() {
         <section className="project-page container ">
             {/* Header: Back Link + Title + Subtitle */}
             <header className="project-header">
-
                 <div >
                     <h1 className="text-display-project">{project.title}</h1>
                     <div className="intro-text" style={{ fontSize: '1.2rem', }}>
@@ -57,7 +56,7 @@ function ProjectPage() {
                                     e.target.style.display = 'none';
                                     e.target.parentNode.style.background = 'linear-gradient(135deg, #111 0%, #222 100%)';
                                 }}
-                                style={{ width: '90%', height: '90%', objectFit: 'cover' }}
+                                style={{ width: '90%', height: '90%', objectFit: 'contain' }}
                             />
                         </div>
                     </div>
@@ -65,13 +64,11 @@ function ProjectPage() {
 
                 {/* Right Column: Details */}
                 <div className="project-details">
+
                     <div className="description-text">
-                        <p>{project.description}</p>
-                        <p>
-                            El objetivo principal fue crear una experiencia de usuario fluida y
-                            altamente performante. Se utilizaron las mejores prácticas de {project.tech[0]}
-                            para asegurar la escalabilidad y mantenibilidad del código.
-                        </p>
+                        {project.description.split('\n\n').map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))}
                     </div>
 
                     <div className="tech-stack-section">

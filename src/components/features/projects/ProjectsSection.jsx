@@ -27,7 +27,7 @@ const ProjectsSection = () => {
   const academicProjects = projects.filter(project => project.academic)
 
   return (
-    <section ClassName='paddingLayout'>
+    <section className='paddingLayout'>
       <FeaturedProjects projects={featuredProjects} />
       <ProjectsList projects={academicProjects} />
     </section>

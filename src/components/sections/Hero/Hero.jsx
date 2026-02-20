@@ -14,7 +14,7 @@ const Hero = () => {
   const handleMouseMove = useMouseTracking('normalized')
   const videoRef = useRef(null)
 
-  // ✅ estado persistente SOLO durante navegación SPA
+  // estado persistente durante navegación SPA
   const [isCompact, setIsCompact] = useState(getHeroPlayed())
 
   const handleMouseLeave = (e) => {
@@ -23,13 +23,11 @@ const Hero = () => {
     hero.style.setProperty('--mouse-y', 0.5)
   }
 
-  // ✅ cuando termina el video
   const handleVideoEnd = () => {
     setHeroPlayed()
     setIsCompact(true)
   }
 
-  // seguridad extra
   useEffect(() => {
     if (isCompact && videoRef.current) {
       videoRef.current.pause()
@@ -44,16 +42,15 @@ const Hero = () => {
       style={{ '--mouse-x': 0.5, '--mouse-y': 0.5 }}
     >
       {/* BACKGROUND */}
-      <div className="hero-glow-bg"></div>
-
-   {/*    {<div className="hero-bg-text">
-        <span>PORTFOLIO</span>
-      </div>} */}
+      <div className="hero-glow-layer">
+        <div className="hero-glow-bg"></div>
+      </div>
 
       {/* FIGURE */}
       <div className="hero-figure-container">
         <div className="figure-glow"></div>
         <div className="figure-glow2"></div>
+
         <div className="code-symbol">
           <FaReact />
         </div>

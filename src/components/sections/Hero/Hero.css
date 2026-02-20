@@ -18,7 +18,6 @@
   transition:
     height 0.9s cubic-bezier(.22,1,.36,1),
     padding 0.9s cubic-bezier(.22,1,.36,1);
-  
 }
 
 /* =====================================================
@@ -28,11 +27,10 @@
 .hero.hero-compact {
   height: 38vh;
   min-height: 320px;
-   
 }
 
 /* =====================================================
-   LAYER 1 — BACKGROUND GLOW
+   BACKGROUND GLOW
 ===================================================== */
 
 .hero-glow-bg {
@@ -40,48 +38,14 @@
   inset: 0;
   z-index: 1;
   opacity: 0.5;
-  overflow: visible; 
+
   background:
     radial-gradient(circle at 20% 30%, rgba(138,43,226,.05), transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(138,43,226,.05), transparent 40%);
 }
 
 /* =====================================================
-   LAYER 2 — BACKGROUND TEXT
-===================================================== */
-
-.hero-bg-text {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-
-  width: 50%;
-  text-align: center;
-
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
-}
-
-.hero-bg-text span {
-  display: block;
-  font-family: var(--font-main);
-  font-size: 15vw;
-  font-weight: 900;
-  line-height: 1;
-
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,.1);
-
-  letter-spacing: .05em;
-  opacity: .8;
-  transform: scaleY(1.6);
-}
-
-/* =====================================================
-   LAYER 3 — FIGURE
+   FIGURE CONTAINER
 ===================================================== */
 
 .hero-figure-container {
@@ -108,7 +72,7 @@
   transform: scale(.9) translateY(20%);
 }
 
-/* ---------- VIDEO + FALLBACK ---------- */
+/* ---------- MEDIA ---------- */
 
 .hero-figure-video,
 .hero-figure-fallback {
@@ -135,7 +99,6 @@
     transform .9s cubic-bezier(.22,1,.36,1);
 }
 
-/* fallback fade */
 .hero-figure-fallback {
   opacity: 0;
   animation: heroFadeIn .8s ease forwards;
@@ -167,7 +130,7 @@
   mix-blend-mode: screen;
   opacity: .6;
   z-index: -1;
-  
+
   transition: transform .1s ease-out;
 }
 
@@ -226,7 +189,7 @@
 }
 
 /* =====================================================
-   LAYER 4 — CONTENT
+   CONTENT
 ===================================================== */
 
 .hero-content {
@@ -250,11 +213,10 @@
 
 .hero.hero-compact .hero-content {
   transform: translateY(-20%);
-  overflow: visible;
 }
 
 /* =====================================================
-   LAYER 5 — OVERLAY
+   OVERLAY
 ===================================================== */
 
 .hero-overlay {
@@ -268,7 +230,7 @@
 }
 
 /* =====================================================
-   RESPONSIVE — COMPACT CLEAN VERSION
+   MOBILE
 ===================================================== */
 
 @media (max-width: 768px) {
@@ -281,12 +243,6 @@
   .hero.hero-compact {
     height: 25vh;
     min-height: 260px;
-  }
- 
-  .hero-bg-text span {
-    font-size: 26vw;
-    transform: scaleY(1.35);
-    opacity: .55;
   }
 
   .hero-figure-container {
@@ -325,9 +281,9 @@
     text-align: center;
     gap: .5rem;
   }
- 
+
   .hero-overlay {
     background:
       linear-gradient(to top, var(--color-bg) 8%, transparent 40%);
-  } 
+  }
 }

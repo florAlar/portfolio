@@ -58,7 +58,7 @@ const AboutPage = () => {
             <div className="section-header">
               <span className="intro-text neon-text-primary">SOBRE MÍ</span>
               <h1 className="text-h2">
-                Desarrollo  con diseño, lógica y pensamiento crítico
+                Construyo experiencias web
                 <span className="text-muted">;</span>
               </h1>
               {/*  <p className="intro-text">90% passion, 10% caffeine</p> */}
@@ -66,13 +66,13 @@ const AboutPage = () => {
 
             <div className="bio-text">
               <p>
-                Me considero una persona curiosa y orientada al aprendizaje constante. Me gusta entender cómo funcionan las cosas por dentro, cuestionar decisiones técnicas y mejorar soluciones paso a paso. Disfruto trabajar en entornos donde puedo experimentar, equivocarme y refinar ideas hasta que el resultado final tenga sentido tanto a nivel funcional como estético.
-              </p>
-
+                Soy desarrolladora frontend en formación, próxima a graduarme como Técnica en Aplicaciones Informáticas, con experiencia creando proyectos web reales de manera independiente. Trabajo principalmente con tecnologías modernas del ecosistema JavaScript, enfocándome en construir interfaces claras, funcionales y bien estructuradas.</p>
+              <p
+              >He desarrollado proyectos freelance donde diseñé la arquitectura de componentes y la estructura de información desde cero, acompañando todo el proceso desde la idea inicial hasta la puesta en producción. Me interesa especialmente crear experiencias de usuario cuidadas y aplicaciones mantenibles a largo plazo.</p>
               <p>
-                En el desarrollo encuentro un equilibrio entre lógica y creatividad. Me interesa escribir código claro, mantenible y con buenas prácticas, priorizando siempre la legibilidad y la estructura antes que soluciones apresuradas. Suelo enfocarme en construir interfaces limpias, accesibles y coherentes, cuidando los detalles que hacen que la experiencia del usuario sea fluida y natural.
-              </p>
-
+                Trabajo de forma autónoma y utilizo herramientas de inteligencia artificial como apoyo para investigar, resolver problemas y optimizar el desarrollo, siempre priorizando buenas prácticas.</p>
+              <p>
+                Actualmente estoy orientando mi crecimiento profesional hacia el desarrollo mobile con React Native, buscando formar parte de un equipo donde pueda seguir aprendiendo y aportar soluciones reales.</p>
             </div>
           </div>
           <a
