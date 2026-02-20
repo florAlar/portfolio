@@ -1,6 +1,7 @@
 /* =========================
    PAGE
 ========================= */
+
 .project-page {
     padding-bottom: var(--space-xl);
     animation: fadeIn 0.5s ease-in-out;
@@ -20,23 +21,25 @@
 /* =========================
    HEADER
 ========================= */
+
 .project-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    gap: 2rem;
+
     margin-top: var(--space-lg);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
-.gap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.project-header h1 {
+    line-height: 1.05;
 }
 
 /* =========================
    MAIN CONTENT GRID
 ========================= */
+
 .project-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -54,48 +57,47 @@
 /* =========================
    IMAGE COLUMN
 ========================= */
+
 .project-gallery {
     position: relative;
-}
-
-.main-image-container {
-    background-color: var(--card-bg);
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
 }
 
 .project-image-placeholder {
     width: 100%;
     height: 100%;
+    aspect-ratio: 4/3;
+
     background: linear-gradient(
         135deg,
         var(--color-bg-alt) 0%,
         var(--color-bg-soft) 100%
     );
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text-muted);
+
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .project-image-placeholder img {
-    filter: grayscale(80%);
-    transition: filter 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(70%);
+    transition: filter 0.35s ease, transform 0.4s ease;
 }
 
 .project-image-placeholder:hover img {
     filter: grayscale(0%);
+    transform: scale(1.02);
 }
 
 /* =========================
    DETAILS COLUMN
 ========================= */
+
 .project-details {
     display: flex;
     flex-direction: column;
@@ -119,14 +121,12 @@
 }
 
 .tech-tag {
-    background: transparent;
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-family: var(--font-mono);
     color: var(--color-text-muted);
     font-weight: 600;
-    border: none;
     transition: color 0.2s;
 }
 
@@ -134,15 +134,21 @@
     color: var(--color-text);
 }
 
+/* =========================
+   ACTION BUTTONS
+========================= */
+
 .action-buttons {
     display: flex;
     gap: var(--space-md);
     margin-top: var(--space-md);
+    flex-wrap: wrap;
 }
 
 /* =========================
    CTA CARD
 ========================= */
+
 .cta-card {
     display: flex;
     flex-direction: column;
@@ -172,13 +178,11 @@
     max-width: 640px;
 }
 
-/* Title enhancement */
 .cta-card .text-h2 {
     margin: 0 0 1rem 0;
     font-weight: 500;
     letter-spacing: -0.02em;
     line-height: 1.15;
-    position: relative;
 
     text-shadow:
         0 0 10px rgba(255,255,255,0.04),
@@ -204,7 +208,6 @@
     font-size: 1rem;
     line-height: 1.7;
     opacity: 0.6;
-    max-width: 52ch;
     transition: opacity 0.3s ease;
 }
 
@@ -212,19 +215,10 @@
     opacity: 0.9;
 }
 
-/* Button adjustment */
 .cta-card .btn {
     align-self: center;
-    margin-top: 0.5rem;
 }
 
-@media (min-width: 768px) {
-    .cta-card .btn {
-        margin-top: 0;
-    }
-}
-
-/* Arrow animation */
 .arrow-icon {
     display: inline-block;
     margin-left: 6px;
@@ -235,33 +229,73 @@
     transform: translateX(4px);
 }
 
-/* =========================
-   MOBILE ADJUSTMENTS
-========================= */
+/* ======================================================
+   🔥 MOBILE REDESIGN (REAL)
+====================================================== */
+
 @media (max-width: 768px) {
 
-  .main-content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+    /* HEADER → vertical hero style */
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        margin-bottom: var(--space-lg);
+    }
 
-  /* Hero full width sin romper containers */
-  .hero {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
-    max-width: none;
-  }
+    /* ocultamos volver (UX moderna) */
+    .project-header .btn {
+        display: none;
+    }
 
-  /* Containers mantienen padding interno */
-  .container,
-  .container-wide,
-  .container-slim {
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
-  }
+    .project-header h1 {
+        font-size: clamp(2rem, 7vw, 2.6rem);
+        letter-spacing: -0.02em;
+    }
 
-  .paddingLayout {
-    padding: 20px;
-  }
+    .project-header .intro-text {
+        font-size: 0.95rem !important;
+        opacity: 0.7;
+    }
+
+    /* IMAGE = HERO FULL WIDTH */
+    .project-gallery {
+        margin-left: calc(var(--space-md) * -1);
+        margin-right: calc(var(--space-md) * -1);
+    }
+
+    .project-image-placeholder {
+        border-radius: 0;
+        aspect-ratio: 16 / 10;
+    }
+
+    /* botones antes del texto */
+    .project-details {
+        gap: 1rem;
+    }
+
+    .action-buttons {
+        order: -1;
+        width: 100%;
+    }
+
+    .action-buttons .btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .description-text {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .tech-tags {
+        gap: 0.5rem;
+    }
+
+    .cta-card {
+        gap: 1.5rem;
+        padding: var(--space-lg);
+    }
+
 }
