@@ -1,0 +1,102 @@
+/* =========================================
+   FEATURED PROJECTS SECTION
+========================================= */
+
+.featured-section {
+    width: 100%;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-projects .section-header {
+    margin-bottom: 3rem;
+    border-left: 4px solid var(--primary-neon);
+    padding-left: 1rem;
+}
+
+/* =========================================
+   DESKTOP GRID
+========================================= */
+
+.featured-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    perspective: 1000px;
+    width: 100%;
+    margin-bottom: var(--space-lg);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+    .featured-grid {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   MOBILE SLIDER
+   
+   ROOT CAUSE OF PREVIOUS BUG:
+   .container-wide in global.css has `padding: 0 var(--space-lg)` (2rem each side).
+   The grid was trapped inside that padding, so it could never reach viewport edges.
+   The `> *` selector also lost specificity against .featured-card's own flex/max-width rules.
+   
+   FIX:
+   1. Break out of container-wide using 100vw + negative margin-left.
+   2. Override .featured-card sizing directly (not via `> *`) in FeaturedCard.css.
+========================================= */
+
+@media (max-width: 768px) {
+
+    .featured-grid {
+        /* Break out of .container-wide padding (--space-lg = 2rem) */
+        width: 100vw;
+        margin-left: calc(-1 * var(--space-lg));
+
+        /* Slider layout */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        gap: 1.2rem;
+        padding: 1rem 1.5rem 2rem;
+
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .featured-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Trailing spacer so last card fully snaps into view */
+    .featured-grid::after {
+        content: '';
+        flex: 0 0 1rem;
+    }
+}

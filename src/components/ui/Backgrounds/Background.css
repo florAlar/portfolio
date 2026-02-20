@@ -1,0 +1,94 @@
+:root {
+    --bg-base: #070a12;
+    --aurora-1: #6d28d9;
+    --aurora-2: #06b6d4;
+    --aurora-3: #ef4444;
+}
+
+/* Root container */
+.background-root {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #050505;
+    /* Base color provided by user */
+    margin-left: -20px ;
+    margin-right: -20px ;
+    width: calc(100% + 40px) ;
+    max-width: none ;
+    padding: 20px;
+}
+
+/* Glow Animation Layer */
+/* Glow Figures Container */
+.glow-figure {
+    position: absolute;
+    border-radius: 50%;
+    /* Create the glow effect */
+    background: conic-gradient(from 180deg,
+            var(--c1),
+            var(--c3),
+            var(--c5),
+            var(--c2),
+            var(--c1));
+    filter: blur(60px);
+    opacity: 0.1;
+    z-index: 0;
+    mix-blend-mode: screen;
+    animation: glow-spin 16s linear infinite;
+    will-change: transform;
+
+}
+
+/* Specific Figures */
+.figure-1 {
+    width: 600px;
+    height: 600px;
+    top: 10%;
+    left: -15%;
+    animation-duration: 25s;
+    animation-direction: reverse;
+
+}
+
+.figure-2 {
+    width: 500px;
+    height: 500px;
+    top: 40%;
+    right: -10%;
+
+    animation-duration: 20s;
+}
+
+.figure-3 {
+    width: 400px;
+    height: 400px;
+    bottom: -5%;
+    left: 5%;
+
+    animation-duration: 30s;
+    animation-direction: reverse;
+}
+
+@keyframes glow-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Aurora layer - Deprecated/Removed in favor of CSS background above, or kept if we want movement. 
+   User didn't ask for animation on background, but previous had it. 
+   "solo modificar los estilos... mantener la estructura actual"
+   The User CSS for body has NO animation. 
+   I will remove .background-aurora styles or hide it.
+*/
+.background-aurora {
+    display: none;
+}
+
+/* Content above background */
+.background-content {
+    position: relative;
+    z-index: 1;
+}
+

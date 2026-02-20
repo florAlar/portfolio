@@ -1,0 +1,241 @@
+/* Card base */
+.project-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    overflow: hidden;
+    transition: transform var(--card-transition), box-shadow var(--card-transition);
+
+    --card-transition: 0.4s ease;
+    --card-hover-primary: var(--primary-neon);
+}
+
+.project-card.type-backend {
+    --card-hover-primary: var(--c6);
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+/* ===== BACKGROUND IMAGE ===== */
+.project-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: 42%;
+    background-position: right;    
+    opacity: 0.45;
+    /* transform: scale(1.05); */
+    transform: translateX(-10px) translateY(-5px);
+    background-repeat: no-repeat;
+    transition:
+        opacity var(--card-transition),
+        transform var(--card-transition),
+        filter var(--card-transition);
+    z-index: 1;
+    
+    pointer-events: none;
+}
+
+.project-card:hover .project-card-bg {
+    opacity: 0.16;
+    filter: grayscale(0.3) blur(1.5px);
+    /* transform: scale(1.08); */
+}
+
+/* Icon */
+.project-type-icon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    opacity: 0;
+    z-index: 10;
+    color: var(--card-hover-primary);
+    transition: opacity var(--card-transition), filter var(--card-transition);
+}
+
+.project-card:hover .project-type-icon {
+    opacity: 1;
+}
+
+.project-type-icon:hover {
+    filter: drop-shadow(0 0 5px var(--card-hover-primary));
+}
+
+.project-type-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Content */
+.card-content {
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    justify-content: flex-start;
+}
+
+/* ===== TITLE ===== */
+.card-title {
+    margin: 0;
+    font-size: 1.55rem;
+    font-family: var(--font-main);
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.card-title span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+/* subrayado */
+.card-title span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--card-hover-primary);
+    box-shadow: 0 0 6px var(--card-hover-primary);
+    border-radius: 1px;
+    transition: width 0.45s ease;
+}
+
+.project-card:hover .card-title span::after {
+    width: 100%;
+}
+
+/* ===== TECH TEXT ===== */
+.card-tech-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition:
+        opacity var(--card-transition),
+        transform var(--card-transition),
+        visibility 0s linear 0.4s;
+}
+
+.project-card:hover .card-tech-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+.tech-text-item {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    transition: color var(--card-transition);
+}
+
+.project-card:hover .tech-text-item {
+    color: var(--card-hover-primary);
+}
+
+/* Description */
+.card-description-text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.45);
+    width: 60%;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    text-align: left;
+    transition: color var(--card-transition);
+}
+
+.project-card:hover .card-description-text {
+    color: #fff;
+}
+
+/* Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    padding-top: 0.5rem;
+}
+
+/* Actions */
+.card-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Buttons */
+.card-nav-circle {
+    padding: 5px 8px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.0);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--card-transition);
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0;
+}
+
+.project-card:hover .card-nav-circle {
+    opacity: 1;
+}
+
+.project-link-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    transition: all var(--card-transition);
+    padding: 8px 0;
+}
+
+.project-card:hover .project-link-secondary {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.project-link-secondary:hover {
+    color: #fff;
+    transform: translateX(3px);
+}
+
+.project-link-secondary svg {
+    font-size: 1rem;
+}
+
+.card-title-hover {
+    position: relative;
+    cursor: default;
+}

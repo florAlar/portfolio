@@ -1,0 +1,74 @@
+/* Footer.css */
+.site-footer {
+  width: 100%;
+  padding: var(--space-lg) 0;
+  background-color: transparent;
+  color: var(--color-text);
+  /* border-top: 1px solid var(--glass-border); separated line not required */
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.footer-left {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-left {
+    text-align: left;
+  }
+}
+
+.footer-copy {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.footer-love {
+  color: #444;
+  /* Dimmed text */
+  margin: 0.2rem 0 0 0;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.separator {
+  color: #333;
+}
+
+.footer-links li a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: var(--primary-neon);
+}

@@ -1,0 +1,120 @@
+/* =========================
+   WRAPPER
+========================= */
+.contact-cta-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    margin: var(--space-xl) 0;
+}
+
+/* =========================
+   CTA CARD
+========================= */
+.contact-cta-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+
+    padding: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .contact-cta-card {
+        flex-direction: row;
+        align-items: center;
+        padding: var(--space-xl);
+    }
+}
+
+/* =========================
+   CONTENT
+========================= */
+.cta-content {
+    max-width: 640px;
+}
+
+/* =========================
+   TITLE
+========================= */
+.cta-title {
+    color: #fff;
+    margin: 0 0 1rem 0;
+
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+
+    /* sutil énfasis premium */
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.04),
+        0 0 30px rgba(255, 255, 255, 0.02);
+}
+
+/* subrayado técnico, no invasivo */
+.cta-title::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 2px;
+    margin-top: 0.6rem;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary-neon),
+        transparent
+    );
+
+    opacity: 0.6;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+.cta-description {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+
+    color: var(--color-text-muted);
+    opacity: 0.6;
+
+    max-width: 52ch;
+}
+
+/* resalta el mensaje en hover sin romper glass */
+.contact-cta-card:hover .cta-description {
+    opacity: 0.9;
+}
+
+/* =========================
+   BUTTON ADJUSTMENT
+   (sin romper btn global)
+========================= */
+.contact-cta-card .btn {
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .contact-cta-card .btn {
+        margin-top: 0;
+    }
+}
+
+/* icono flecha más fino */
+.arrow-icon {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+.contact-cta-card:hover .arrow-icon {
+    transform: translateX(4px);
+}

@@ -1,0 +1,267 @@
+/* =========================
+   PAGE
+========================= */
+.project-page {
+    padding-bottom: var(--space-xl);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   HEADER
+========================= */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* =========================
+   MAIN CONTENT GRID
+========================= */
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 900px) {
+    .project-content {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 4rem;
+    }
+}
+
+/* =========================
+   IMAGE COLUMN
+========================= */
+.project-gallery {
+    position: relative;
+}
+
+.main-image-container {
+    background-color: var(--card-bg);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.project-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        var(--color-bg-alt) 0%,
+        var(--color-bg-soft) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+}
+
+.project-image-placeholder img {
+    filter: grayscale(80%);
+    transition: filter 0.3s ease;
+}
+
+.project-image-placeholder:hover img {
+    filter: grayscale(0%);
+}
+
+/* =========================
+   DETAILS COLUMN
+========================= */
+.project-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #cccccc;
+    margin-bottom: var(--space-lg);
+}
+
+.tech-stack-section {
+    margin-bottom: var(--space-lg);
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.tech-tag {
+    background: transparent;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    border: none;
+    transition: color 0.2s;
+}
+
+.tech-tag:hover {
+    color: var(--color-text);
+}
+
+.action-buttons {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+/* =========================
+   CTA CARD
+========================= */
+.cta-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+
+    position: relative;
+    z-index: 1;
+
+    margin-top: var(--section-spacing);
+    padding: var(--space-lg);
+
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .cta-card {
+        flex-direction: row;
+        align-items: center;
+        padding: var(--space-xl);
+    }
+}
+
+.cta-content {
+    max-width: 640px;
+}
+
+/* Title enhancement */
+.cta-card .text-h2 {
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    position: relative;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.04),
+        0 0 30px rgba(255,255,255,0.02);
+}
+
+.cta-card .text-h2::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 1px;
+    margin-top: 0.6rem;
+    background: linear-gradient(
+        90deg,
+        var(--primary-neon),
+        transparent
+    );
+    opacity: 0.6;
+}
+
+.cta-card .text-muted {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.6;
+    max-width: 52ch;
+    transition: opacity 0.3s ease;
+}
+
+.cta-card:hover .text-muted {
+    opacity: 0.9;
+}
+
+/* Button adjustment */
+.cta-card .btn {
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .cta-card .btn {
+        margin-top: 0;
+    }
+}
+
+/* Arrow animation */
+.arrow-icon {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+.cta-card:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* =========================
+   MOBILE ADJUSTMENTS
+========================= */
+@media (max-width: 768px) {
+
+  .main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Hero full width sin romper containers */
+  .hero {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+    max-width: none;
+  }
+
+  /* Containers mantienen padding interno */
+  .container,
+  .container-wide,
+  .container-slim {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  .paddingLayout {
+    padding: 20px;
+  }
+}

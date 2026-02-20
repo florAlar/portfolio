@@ -1,0 +1,201 @@
+.projects-section {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    margin: var(--space-lg) 0;
+}
+
+/* Container width handled by .container-wide global class */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-rows: 240px; */
+    gap: var(--space-lg);
+    position: relative;
+    z-index: 2;
+    grid-auto-flow: dense;
+}
+
+/* 
+.card-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+*/
+.card-tall {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.card-wide {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.col-start-1 {
+    grid-column-start: 1;
+}
+
+.col-start-4 {
+    grid-column-start: 4;
+}
+
+/* Tall Card Image Override */
+.card-tall .project-card .card-visual {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-tall .project-card .card-image-wrapper {
+    aspect-ratio: unset;
+    flex-grow: 1;
+    height: auto;
+    min-height: 200px;
+}
+
+.card-tall .project-card .card-content {
+    flex-grow: 1;
+    /* direction column handled by ProjectCard.css default */
+}
+
+/* Base card sizing */
+.project-card-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+/* Background Symbols */
+.section-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    user-select: none;
+    /* Luminous Effect */
+    mix-blend-mode: screen;
+}
+
+.decor-braces {
+    top: 20%;
+    right: 5%;
+    color: var(--primary-neon);
+    transform: rotate(15deg);
+    filter: drop-shadow(0 0 10px var(--primary-neon)) drop-shadow(0 0 50px var(--primary-neon));
+    animation: float 8s ease-in-out infinite;
+}
+
+.decor-tag {
+    top: 40%;
+    left: -2%;
+    color: var(--secondary-neon);
+    transform: rotate(-10deg);
+    filter: drop-shadow(0 0 10px var(--secondary-neon)) drop-shadow(0 0 50px var(--secondary-neon));
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(15deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(15deg);
+    }
+}
+
+
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+
+    /* Reset spans for tablet where appropriate or keep them if they fit 2 cols */
+    .card-large {
+        grid-column: span 2;
+        /* Full width on tablet */
+        grid-row: span 2;
+    }
+
+    .card-wide {
+        grid-column: span 2;
+        /* Full width on tablet */
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .card-large,
+    .card-tall,
+    .card-wide {
+        grid-column: auto;
+        grid-row: auto;
+        height: auto;
+        aspect-ratio: auto;
+    }
+
+    .project-card-wrapper {
+        height: auto;
+    }
+
+    .projects-section {
+        overflow: hidden;
+        /* prevent overflow on mobile to avoid scrollbar mess */
+    }
+
+    .decor-braces {
+        top: 0;
+        right: -10%;
+    }
+
+    .decor-tag {
+        bottom: 0;
+        left: -10%;
+    }
+}
+
+.section-title {
+    color: #cccccc;
+    margin-bottom: var(--space-lg);
+    position: relative;
+    display: inline-flex;
+    /* Changed to inline-flex for icon alignment */
+    align-items: center;
+    gap: 1rem;
+    /* Space between icon and text */
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+
+/* Subtitle style inherited from global.css */
+
+.title-icon {
+    color: var(--primary-neon);
+    filter: drop-shadow(0 0 5px var(--primary-neon));
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-neon);
+    box-shadow: 0 0 10px var(--primary-neon);
+}

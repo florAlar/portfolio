@@ -1,0 +1,284 @@
+/* =========================================
+   FEATURED CARD — BASE
+========================================= */
+
+.featured-card {
+    position: relative;
+    flex: 1;
+    max-width: 32%;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+
+    transform: scale(1);
+    transition: transform 0.4s ease;
+}
+
+.featured-card.active {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.featured-card:hover {
+    transform: scale(1.03) translateY(-10px);
+}
+
+.featured-card.active:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.featured-card .card-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    transition: transform 0.6s ease;
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.featured-card .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.05) 0%,
+        rgba(0, 0, 0, 0.35) 50%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+/* =========================================
+   HEADER SPECS
+========================================= */
+
+.featured-card .card-header-specs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.featured-card .spec-dot {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff;
+}
+
+.featured-card .card-brand-icon {
+    opacity: 0.8;
+}
+
+/* =========================================
+   FLOATING TECH SPECS
+========================================= */
+
+.featured-card .card-tech-specs {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.featured-card:hover .card-tech-specs {
+    opacity: 1;
+}
+
+.featured-card .tech-spec-item {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    color: #fff;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* =========================================
+   CARD BODY
+========================================= */
+
+.featured-card .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-card .card-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.featured-card .card-title-lg {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.featured-card .card-title-lg span {
+    position: relative;
+    display: inline-block;
+}
+
+.featured-card .card-title-lg span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    background: var(--primary-neon);
+    box-shadow: 0 0 8px var(--primary-neon);
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.featured-card:hover .card-title-lg span::after {
+    width: 100%;
+    opacity: 1;
+    box-shadow:
+        0 0 8px var(--primary-neon),
+        0 0 15px var(--primary-neon),
+        0 0 25px var(--primary-neon);
+}
+
+/* =========================================
+   TECH SUBTITLE
+========================================= */
+
+.featured-card .card-subtitle-tech {
+    color: var(--primary-neon);
+    opacity: 1;
+    display: block;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.featured-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+/* =========================================
+   ACTION BUTTON
+========================================= */
+
+.featured-card .card-action-box {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.featured-card .card-action-box:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    border-color: #fff;
+}
+
+/* =========================================
+   ARROW NAV
+========================================= */
+
+.featured-card .card-nav-circle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+}
+
+.featured-card:hover .card-nav-circle {
+    display: flex;
+    color: var(--primary-neon);
+}
+
+/* =========================================
+   MOBILE OVERRIDES
+   
+   CRITICAL: These rules must use `.featured-card` directly (not `> *` from parent)
+   because `.featured-card`'s own base rules (flex:1, max-width:32%) have higher
+   specificity than a parent's `> *` selector, and would win otherwise.
+========================================= */
+
+@media (max-width: 768px) {
+
+    .featured-card {
+        /* Override desktop sizing — become a fixed-width slide */
+        flex: 0 0 80% !important;
+        max-width: 80% !important;
+        width: 80% !important;
+        height: 360px;
+
+        scroll-snap-align: center;
+
+        /* Disable desktop scale effects that cause layout shifts */
+        transform: none !important;
+    }
+
+    .featured-card.active {
+        transform: none !important;
+    }
+
+    /* Show arrow icon permanently on mobile (no hover on touch) */
+    .featured-card .card-nav-circle {
+        display: flex;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        font-size: 0.8rem;
+        color: var(--primary-neon);
+    }
+}

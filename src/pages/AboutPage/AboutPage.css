@@ -1,0 +1,209 @@
+.about-page {
+    /* Uses .container-slim and .page-air-top from global.css */
+    width: 100%;
+}
+/* .section-header{
+    gap:0;
+} */
+/* Page header overrides removed to use global typography system */
+ .profile-bio .section-header {
+    gap: var(--space-xs);
+}
+ 
+/* =========================
+   PROFILE SECTION
+========================= */
+.about-profile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    margin-bottom: var(--section-spacing);
+}
+
+@media (min-width: 900px) {
+    .about-profile {
+        grid-template-columns: 340px 1fr;
+        gap: var(--space-xl);
+    }
+}
+
+.profile-image-container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1);
+    transition: filter 0.3s ease;
+}
+
+.bio-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: var(--space-lg);
+    letter-spacing: -0.01em;
+    color: white;
+}
+
+.highlight-blue {
+    color: var(--primary-neon);
+}
+
+.bio-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.btn-cv{
+    margin-top: var(--space-lg);
+}
+
+.profile-meta {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.meta-icon {
+    color: var(--primary-neon);
+}
+
+/* =========================
+   TECH STACK SECTION
+========================= */
+.stack-section {
+    margin-top: var(--space-xl);
+}
+
+.stack-title {
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.stack-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--primary-neon);
+    opacity: 0.1;
+}
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .stack-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.stack-card {
+    padding: var(--space-lg);
+}
+
+.stack-card:hover {
+    border-color: var(--primary-neon);
+}
+
+.stack-header span {
+    color: var(--primary-neon) !important;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.stack-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: var(--space-lg);
+}
+
+.stack-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stack-tag {
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+    /* Legible medium gray */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.stack-tag:hover {
+    color: var(--color-text);
+    /* Brighten on hover */
+}
+
+.stack-tag:hover {
+    opacity: 1;
+}
+
+.badge {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-neon);
+}
+
+.badge-blue {
+    background-color: transparent;
+    color: var(--primary-neon);
+
+}
+
+.profile-image-container {
+    will-change: transform;
+    transform-style: preserve-3d;
+    pointer-events: auto;
+}
+.stack-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        var(--primary-neon),
+        transparent
+    );
+    opacity: 0.15;
+}

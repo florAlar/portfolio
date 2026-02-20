@@ -1,0 +1,237 @@
+/* =====================================================
+   CONTACT PAGE — BASE
+===================================================== */
+
+.contact-page {
+  width: 100%;
+}
+
+/* =====================================================
+   LAYOUT GRID
+===================================================== */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: clamp(2rem, 4vw, 3.5rem);
+
+  margin: var(--space-lg) 0;
+}
+
+/* Desktop split */
+@media (min-width: 900px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+/* =====================================================
+   LEFT COLUMN — TEXT STRUCTURE
+===================================================== */
+
+.column-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* ← clave */
+  text-align: left;        /* ← clave */
+
+  gap: clamp(2rem, 4vw, 3rem);
+  max-width: 560px;
+}
+
+/* top text block */
+.column-info-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+/* headline rhythm */
+.column-info-top h1 {
+  line-height: 1.15;
+  max-width: 18ch;
+}
+
+/* paragraph readability */
+.column-info-top p {
+  max-width: 46ch;
+  line-height: 1.65;
+}
+
+/* =====================================================
+   CONTACT INFO LIST
+===================================================== */
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icon-box {
+  flex-shrink: 0;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  color: var(--primary-neon);
+  opacity: .8;
+}
+
+/* text block alignment */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.contact-details p {
+  margin: 0;
+}
+
+.contact-label {
+  font-family: var(--font-main);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* =====================================================
+   RIGHT COLUMN — FORM
+===================================================== */
+
+.column-form {
+  width: 100%;
+}
+
+.contact-form-card {
+  width: 100%;
+  padding: clamp(1.5rem, 3vw, var(--space-xl));
+}
+
+/* =====================================================
+   FORM ERRORS
+===================================================== */
+
+.form-input.error,
+.form-textarea.error {
+  border: 1px solid var(--color-error);
+  box-shadow: 0 0 0 1px var(--color-error-soft);
+}
+
+.form-input.error:focus,
+.form-textarea.error:focus {
+  border: 1px solid var(--color-error);
+  box-shadow: 0 0 0 2px var(--color-error-soft);
+}
+
+.form-error {
+  margin-top: .35rem;
+  color: var(--color-error);
+}
+
+/* =====================================================
+   RESPONSIVE — TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .column-info {
+    max-width: 100%;
+  }
+
+  .column-info-top h1 {
+    max-width: 22ch;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE — MOBILE (LEFT ALIGNED VERSION)
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .contact-layout {
+    gap: 3rem;
+  }
+
+  /* mantenemos alineación izquierda */
+  .column-info {
+    align-items: flex-start;
+    text-align: left;
+    gap: 2.2rem;
+  }
+
+  .column-info-top {
+    align-items: flex-start;
+  }
+
+  .column-info-top h1 {
+    max-width: 20ch;
+  }
+
+  .column-info-top p {
+    max-width: 34ch;
+  }
+
+  /* info list alineada izquierda */
+  .contact-info-list {
+    width: 100%;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+
+  .contact-item {
+    width: 100%;
+  }
+
+  /* form spacing */
+  .column-form {
+    margin-top: .5rem;
+  }
+
+  .contact-form-card {
+    padding: 1.6rem;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .contact-layout {
+    gap: 2.4rem;
+  }
+
+  .column-info-top h1 {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+  }
+
+  .contact-form-card {
+    padding: 1.25rem;
+  }
+
+  .icon-box {
+    width: 42px;
+    height: 42px;
+  }
+}

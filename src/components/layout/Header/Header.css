@@ -1,0 +1,238 @@
+/* ================= HEADER ================= */
+
+.site-header {
+  background-color: transparent;
+  color: var(--color-text);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-header);
+
+  width: 100%;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(5, 5, 5, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== LAYOUT ===== */
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ===== LOGO ===== */
+
+.logo-container {
+  display: flex;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  color: var(--primary-neon);
+}
+
+.logo-text {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+/* ===== RIGHT SIDE ===== */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-palette-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.header-palette {
+  display: none;
+}
+
+/* ===== DESKTOP NAV ===== */
+
+.desktop-nav {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-neon);
+}
+
+.nav-links a.active {
+  border-left: 2px solid var(--primary-neon);
+  padding-left: 0.4rem;
+  color: #fcfcfc;
+}
+
+/* ===== HAMBURGER ===== */
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-toggle svg {
+  pointer-events: none;
+}
+
+/* ===== MOBILE MENU ===== */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(5, 5, 5, 0.96);
+  backdrop-filter: blur(25px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.mobile-menu.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+.mobile-links {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-links li {
+  margin: 1.6rem 0;
+}
+
+.mobile-links a {
+  font-size: 1.7rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.mobile-links a:hover,
+.mobile-links a.active {
+  color: var(--primary-neon);
+}
+
+/* ===== SCROLL LOCK (🔥 FIX REAL DEL BUG) ===== */
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .header-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .header-palette {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo-container {
+    justify-self: center;
+  }
+
+  .header-right {
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .header-palette-desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+}
