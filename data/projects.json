@@ -7,7 +7,7 @@
     "shortDescription": "Sitio corporativo desarrollado para una empresa real de soluciones informáticas.",
     "description": "Sitio web corporativo desarrollado para una empresa de servicios informáticos orientado a comunicar soluciones tecnológicas de forma clara y profesional.\n\nEl objetivo fue mejorar la presencia digital y facilitar el acceso a información comercial y canales de contacto.\n\nSe trabajó sobre WordPress priorizando rendimiento, claridad visual y adaptabilidad responsive para distintos dispositivos.\n\nEl proyecto se desarrolló en un entorno de producción real, considerando necesidades del cliente, iteraciones de diseño y mantenimiento posterior.",
     "tech": ["WORDPRESS"],
-    "github": "https://github.com/usuario/springboot-microservices",
+    "github": "",
     "demo": "https://www.casstandil.com.ar/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1770850827/casssrl_ve3tnr.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1770850827/casssrl_ve3tnr.webp"
@@ -20,8 +20,8 @@
     "shortDescription": "Portfolio profesional desarrollado con React enfocado en rendimiento y experiencia visual.",
     "description": "Aplicación SPA desarrollada para presentar proyectos y habilidades profesionales mediante una experiencia visual interactiva.\n\nEl objetivo fue construir una interfaz moderna priorizando rendimiento, arquitectura de componentes y navegación fluida.\n\nSe utilizó React junto a herramientas de inteligencia artificial como aceleradores de desarrollo y resolución de problemas.\n\nEl proyecto permitió aplicar buenas prácticas de organización, reutilización de componentes y optimización del renderizado.",
     "tech": ["React", "Full AI"],
-    "github": "https://github.com/usuario/springboot-microservices",
-    "demo": "",
+    "github": "https://github.com/florAlar/portfolio.git",
+    "demo": "https://floralar.github.io/portfolio/#/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1770814195/pruebaDetail_wwapcc.png",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1770814195/pruebaDetail_wwapcc.png"
   },
@@ -33,7 +33,7 @@
     "shortDescription": "Landing page corporativa desarrollada para empresa constructora en Uruguay.",
     "description": "Sitio web institucional desarrollado para una empresa del sector construcción enfocado en presentar servicios y mejorar su presencia online.\n\nEl objetivo fue crear una landing clara y accesible orientada a conversión y contacto comercial.\n\nImplementado en WordPress considerando usabilidad, estructura visual y necesidades reales de producción.\n\nIncluyó adaptación responsive y optimización básica para garantizar una navegación eficiente en distintos dispositivos.",
     "tech": ["WORDPRESS"],
-    "github": "https://github.com/usuario/refragun",
+    "github": "",
     "demo": "https://refragundeluruguay.uy/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771007860/refragun_ilkgx3.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771007860/refragun_ilkgx3.webp"
@@ -46,7 +46,7 @@
     "shortDescription": "Landing page académica enfocada en maquetado responsive con HTML y CSS.",
     "description": "Landing page desarrollada como proyecto académico orientado a consolidar fundamentos de maquetado web.\n\nEl objetivo fue aplicar HTML semántico y CSS moderno para construir una interfaz responsive y organizada.\n\nPermitió afianzar conceptos de estructura visual, jerarquía de contenido y adaptación a distintos tamaños de pantalla.",
     "tech": ["HTML", "CSS"],
-    "github": "https://github.com/usuario/fitlife",
+    "github": "https://github.com/florAlar/proyectoFinalCoder.git",
     "demo": "https://coderfitlife.netlify.app/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771508843/fitlife_1_qrrpqf.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771508843/fitlife_1_qrrpqf.webp"
@@ -59,8 +59,8 @@
     "shortDescription": "Proyecto visual centrado en diseño de interfaces y visualización de datos deportivos.",
     "description": "Aplicación web inspirada en el universo de la Fórmula 1 enfocada en la presentación visual de información y estadísticas.\n\nEl objetivo fue experimentar con jerarquía visual y organización de datos complejos dentro de una interfaz atractiva.\n\nIncluye una sección administrativa simulada sin autenticación para explorar flujos de gestión de contenido.\n\nEl proyecto permitió profundizar en diseño UI y estructura frontend utilizando JavaScript puro.",
     "tech": ["HTML", "CSS", "JS"],
-    "github": "https://github.com/usuario/formula1",
-    "demo": "https://usuario.github.io/formula1",
+    "github": "https://github.com/florAlar/f1-TUDAI.git",
+    "demo": "https://formula1tudai.netlify.app/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771508282/formula1_wgbxkq.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771508282/formula1_wgbxkq.webp"
   },
@@ -72,8 +72,8 @@
     "shortDescription": "Exploración interactiva de interfaces y animaciones utilizando Canvas 2D.",
     "description": "Colección de experimentos interactivos desarrollados con Canvas 2D orientados a explorar animaciones, partículas y renderizado en tiempo real.\n\nEl objetivo fue comprender la interacción gráfica y el comportamiento dinámico de interfaces fuera del flujo tradicional del DOM.\n\nFuncionó como laboratorio visual para experimentar con lógica matemática aplicada a interfaces y animaciones.",
     "tech": ["JS", "HTML", "CANVAS"],
-    "github": "https://github.com/usuario/canvas-games",
-    "demo": "https://usuario.github.io/canvas-games",
+    "github": "https://github.com/florAlar/uiverse.git",
+    "demo": "https://floralar.github.io/uiverse/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771510292/uiverse_1_pg3lts.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771510292/uiverse_1_pg3lts.webp"
   },
@@ -86,7 +86,7 @@
     "description": "Aplicación de trivia desarrollada con JavaScript vanilla que gestiona preguntas, respuestas y sistema de puntaje dinámico.\n\nEl objetivo fue practicar lógica de estado, manipulación del DOM y control de eventos sin utilizar frameworks.\n\nPermitió consolidar fundamentos de programación frontend y estructura de aplicaciones interactivas simples.",
     "tech": ["JS", "HTML", "CSS"],
     "github": "https://github.com/florAlar/cursoJavascript.git",
-    "demo": "https://usuario.github.io/javascript-trivia",
+    "demo": "https://triviastarproyect.netlify.app/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771509521/triviagame_vjhfng.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771509521/triviagame_vjhfng.webp"
   },
@@ -98,8 +98,8 @@
     "shortDescription": "E-commerce frontend desarrollado con React y navegación por rutas.",
     "description": "Aplicación tipo tienda online construida con React enfocada en arquitectura basada en componentes reutilizables.\n\nIncluye navegación por rutas, listado dinámico de productos y un sistema básico de carrito de compras sin integración de pagos.\n\nEl objetivo fue comprender flujo de estado y organización de aplicaciones SPA modernas.",
     "tech": ["React", "Vite", "CSS"],
-    "github": "https://github.com/usuario/react-motoshop",
-    "demo": "https://usuario.github.io/react-motoshop",
+    "github": "https://github.com/florAlar/cursoReact.git",
+    "demo": "https://deluxe-kitsune-36c850.netlify.app/",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771507850/motoshop45000_zubvxf.png",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771507850/motoshop45000_zubvxf.png"
   },
@@ -111,7 +111,7 @@
     "shortDescription": "SPA desarrollada con Angular para exploración de contenido audiovisual.",
     "description": "Aplicación SPA construida con Angular que consume datos dinámicos para mostrar un catálogo de películas y series.\n\nIncluye sistema de favoritos para demostrar comunicación entre componentes y manejo de estado.\n\nEl proyecto permitió comprender arquitectura basada en componentes y flujo de datos dentro del ecosistema Angular.",
     "tech": ["Angular", "TypeScript", "CSS"],
-    "github": "https://github.com/usuario/angular-exaflix",
+    "github": "https://github.com/florAlar/tudaiAngular.git",
     "demo": "https://usuario.github.io/angular-exaflix",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771511175/exaflix_1_miougr.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771511175/exaflix_1_miougr.webp"
@@ -124,8 +124,8 @@
     "shortDescription": "API REST académica para gestión de atracciones turísticas.",
     "description": "API REST desarrollada bajo arquitectura MVC para listar y gestionar información de atracciones turísticas.\n\nEl objetivo fue comprender separación de responsabilidades, definición de rutas y estructuración backend básica.\n\nPermitió afianzar conceptos fundamentales de diseño y organización de APIs.",
     "tech": ["PHP", "API REST"],
-    "github": "https://github.com/usuario/api-atracciones",
-    "demo": "https://usuario.github.io/api-atracciones",
+    "github": "https://github.com/AdriWilgenhoff/WEB2-TPE-API.git",
+    "demo": "",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771510755/server1_uyqll1.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771510755/server1_uyqll1.webp"
   },
@@ -137,8 +137,8 @@
     "shortDescription": "Proyecto SSR orientado a mejorar rendimiento y SEO.",
     "description": "Aplicación backend que implementa Server Side Rendering para optimizar tiempos de carga y posicionamiento SEO.\n\nEl objetivo fue comprender diferencias entre renderizado del lado servidor y aplicaciones puramente cliente.\n\nPermitió analizar impacto del SSR en performance y experiencia de usuario.",
     "tech": ["PHP", "BOOTSTRAP"],
-    "github": "https://github.com/usuario/atracciones-ssr",
-    "demo": "https://usuario.github.io/atracciones-ssr",
+    "github": "https://github.com/AdriWilgenhoff/WEB2-TPE.git",
+    "demo": "",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771509909/tudaiviaja_1_vbrrlt.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771509909/tudaiviaja_1_vbrrlt.webp"
   },
@@ -150,7 +150,7 @@
     "shortDescription": "Backend de microservicios con autenticación JWT.",
     "description": "Sistema backend desarrollado con Spring Boot basado en arquitectura de microservicios orientada a APIs REST escalables.\n\nIncluye autenticación y autorización mediante JWT gestionada desde un gateway centralizado.\n\nEl proyecto permitió trabajar conceptos de seguridad, comunicación entre servicios y diseño backend distribuido.",
     "tech": ["Java", "Spring Boot"],
-    "github": "https://github.com/usuario/springboot-microservices",
+    "github": "https://github.com/AdriWilgenhoff/ArqWeb-Entregables-Grupo25.git",
     "demo": "",
     "thumbnail": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771510754/server2_vi1pqb.webp",
     "image": "https://res.cloudinary.com/dcsen8lj2/image/upload/v1771510754/server2_vi1pqb.webp"
