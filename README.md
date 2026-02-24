@@ -6,7 +6,7 @@ Una plataforma de portfolio interactiva y de alto rendimiento construida con **R
 
 ## 📸 Preview
 
-![Vista previa del proyecto](./assets/mini.png)
+![Vista previa del proyecto](./src/assets/mini.png)
 ---
 
 ## 🚀 Demo en Vivo
