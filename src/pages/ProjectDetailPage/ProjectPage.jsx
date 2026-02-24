@@ -101,11 +101,11 @@ function ProjectPage() {
                 onMouseMove={handleMouseMove}
             >
                 <div className="cta-content">
-                    <h2 className="text-h2">¿Interesado en algo similar?</h2>
-                    <p className="text-muted">Hablemos.</p>
+                    <h2 className="text-h2">¿Trabajamos en algo parecido?</h2>
+                    <p className="text-muted">Si este proyecto encaja con lo que buscas, estaré encantada de conversar sobre cómo podría aportar en tu equipo.</p>
                 </div>
                 <Link to="/contact" className="btn btn-primary">
-                    Escríbeme <span className="arrow-icon">➤</span>
+                    Hablemos <span className="arrow-icon">➤</span>
                 </Link>
             </div>
         </section>

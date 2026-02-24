@@ -15,8 +15,7 @@ const ContactSection = () => {
           <div className="cta-content">
             <h2 className="cta-title text-h2">¿Listo para colaborar?</h2>
             <p className="cta-description">
-              Hablemos sobre tu próximo proyecto técnico. Disponible para roles senior y freelance selecto.
-            </p>
+              Me interesa formar parte de equipos donde construir aplicaciones web, aprender continuamente y mejorar juntos. </p>
           </div>
 
           <Link to="/contact" className="btn btn-primary">
