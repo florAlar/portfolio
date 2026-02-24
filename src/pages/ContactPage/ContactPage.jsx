@@ -19,9 +19,14 @@ const ContactPage = () => {
             <h1 className="text-h2">Construyamos algo increíble juntos.</h1>
 
             <p className="text-muted">
-              Actualmente disponible para nuevos proyectos freelance o colaboraciones full-time.
-              Mi enfoque combina la precisión del backend con la elegancia del frontend en ambientes de alto contraste.
-            </p>
+  Disponible para nuevos proyectos freelance o colaboraciones full-time.
+  <br />
+  
+  Busco integrarme en equipos donde construir aplicaciones web, aprender y aportar valor real, combinando estructura y atención al detalle en la experiencia de usuario.
+  <br />
+  <br />
+  Si tienes una idea, un proyecto o buscas sumar a alguien al equipo, estaré encantada de conversar.
+</p>
           </div>
           <div className="contact-info-list">
             <div className="contact-item">

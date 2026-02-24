@@ -11,26 +11,26 @@ const Footer = () => {
 
           </p>
           <p className="footer-love">
-            © {new Date().getFullYear()} - with love by zeroCore
+            © {new Date().getFullYear()} - with love by zeroCore 
           </p>
         </div>
 
         <nav className="footer-right">
           <ul className="footer-links">
             <li>
-              <a href="https://github.com/zeroCore" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/florAlar" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </li>
             <li className="separator">•</li>
             <li>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/florencia-alarcos/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
             </li>
             <li className="separator">•</li>
             <li>
-              <a href="mailto:hello@zerocore.dev">
+              <a href="mailto:flor.alarcos@gmail.com" target="_blank" rel="noopener noreferrer"A>
                 Mail
               </a>
             </li>
