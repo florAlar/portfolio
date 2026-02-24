@@ -76,7 +76,8 @@ const AboutPage = () => {
             </div>
           </div>
           <a
-           href={`${import.meta.env.BASE_URL}CVAlarcosT.pdf`} download
+            href={`${import.meta.env.BASE_URL}cv/CVAlarcosT.pdf`}
+            download
             className="btn btn-secondary btn-cv "
           >
             DESCARGAR CV

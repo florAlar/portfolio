@@ -14,7 +14,8 @@ const MobileMenu = ({ open, close }) => {
           <li><NavLink to="/about" onClick={close}>Sobre mí</NavLink></li>
           <li><NavLink to="/contact" onClick={close}>Contacto</NavLink></li>
           <li>
-            <a href={`${import.meta.env.BASE_URL}cv.pdf`} download onClick={close}>
+            <a href={`${import.meta.env.BASE_URL}cv/CVAlarcosT.pdf`}
+              download onClick={close}>
               Descargar CV
             </a>
           </li>

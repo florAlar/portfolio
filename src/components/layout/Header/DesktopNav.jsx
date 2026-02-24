@@ -8,7 +8,8 @@ const DesktopNav = () => {
         <li><NavLink to="/about">Sobre mí</NavLink></li>
         <li><NavLink to="/contact">Contacto</NavLink></li>
         <li>
-          <a href={`${import.meta.env.BASE_URL}CVAlarcosT.pdf`} download>CV</a>
+          <a href={`${import.meta.env.BASE_URL}cv/CVAlarcosT.pdf`}
+            download>CV</a>
         </li>
       </ul>
     </nav>
