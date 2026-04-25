@@ -14,7 +14,6 @@ const Hero = () => {
   const handleMouseMove = useMouseTracking('normalized')
   const videoRef = useRef(null)
 
-  // estado persistente durante navegación SPA
   const [isCompact, setIsCompact] = useState(getHeroPlayed())
 
   const handleMouseLeave = (e) => {
@@ -54,6 +53,7 @@ const Hero = () => {
         <div className="code-symbol">
           <FaReact />
         </div>
+        
 
         {!isCompact ? (
           <video
@@ -63,7 +63,8 @@ const Hero = () => {
             autoPlay
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
+            poster={heroFallback}
             onEnded={handleVideoEnd}
           />
         ) : (
@@ -93,3 +94,4 @@ const Hero = () => {
 }
 
 export default Hero
+
